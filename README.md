@@ -8,9 +8,9 @@ Upload multiple with javascript...
 ```
 <script src="src/upload.js"></script>
 ```
-### OR use this script for PRODUCTION
+### OR use this CDN for PRODUCTION
 ```
-<script src="src/upload.min.js"></script>
+<script src="https://www.cdn.lamhotsimamora.com/upload-js/"></script>
 ```
 
 ### Put the input file into your HTML, for example id = "file_1" and name = "file_1" (id and name of INPUT file must be SAME)
