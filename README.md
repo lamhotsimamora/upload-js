@@ -4,9 +4,13 @@ Upload multiple with javascript...
 
 
 ## Get Started
-### Copy this script 'upload.js' into your HTML
+### Copy this script 'upload.js' for DEVELOPMENT into your HTML
 ```
 <script src="src/upload.js"></script>
+```
+### OR use this script for PRODUCTION
+```
+<script src="src/upload.min.js"></script>
 ```
 
 ### Put the input file into your HTML, for example id = file_1 and name = file_1

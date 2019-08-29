@@ -25,10 +25,9 @@ function uploadNow(){
 		data  : 'id|1',
 		// String
 		token : 'abcde12345'
-	}).start(($response)=>{
+	}).start(($response,$info)=>{
 		// get the response and show it to the HTML
 		document.getElementById('display_response').innerHTML = ($response);
-
 	});
 
 }

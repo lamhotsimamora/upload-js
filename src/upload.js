@@ -34,7 +34,7 @@ class Upload
 
     // method to start upload files
     // with callback
-    start(callback)
+    start(callback=null)
     {
         if (this.el.length)
         {
@@ -60,6 +60,7 @@ class Upload
                         var file_size = el.files[0].size;
                         var file_type = el.files[0].type;
                         
+                        // collecting information file into array
                         var info_file = {
                             'file_name' : file_name,
                             'file_size' : file_size,
@@ -78,20 +79,27 @@ class Upload
 
                 // try to access the URL
                 x.open(this.request_method, this.url);
-                // response
-                x.onreadystatechange = function() {
-
+             
+                // x.setRequestHeader("Content-type", "multipart/form-data");
+        
+                x.onreadystatechange = function($info) {
                     // if status is 200 | success
                     if (this.readyState == 4 && this.status == 200) {
-                       // call user function with responseText
-                       callback(this.responseText);
+                        // check if callback is VALID
+                       if (callback!=null)
+                       {
+                            // call user function with responseText and more information
+                            callback(this.responseText,$info);
+                       }else{
+                            console.error("upload.js -> You have to use callback function !");
+                       }
                     }
                 };
                 // send form
                 x.send(this.form);
             }catch(error)
             {
-                console.error("Upload -> "+error);
+                console.error("upload.js -> "+error);
             }
         }
         else{
