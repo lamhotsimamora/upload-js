@@ -1,6 +1,8 @@
 /*
 * Written by Lamhot Simamora
-* 2019
+* Library Upload File Javascript
+* October 2021
+* Github : https://github.com/lamhotsimamora/upload-js
 */
 class Upload
 {
@@ -36,6 +38,10 @@ class Upload
     // with callback
     start(callback=null)
     {
+        if (this.el==null){
+            console.error("upload.js -> element file is nothing !");
+            return;
+        }
         if (this.el.length)
         {
             try
@@ -49,6 +55,10 @@ class Upload
                 for (var i = 0; i <= (this.el.length-1); i++) {
                     // get element by id
                     var el = document.getElementById(this.el[i]);
+                    if (el==null){
+                        console.info("upload.js -> element "+this.el[i]+" is not found !");
+                        continue;
+                    }
                     // get attribute by name
                     var attr = el.getAttribute('name');
                     // check if input file is TRUE
@@ -75,12 +85,12 @@ class Upload
                 // append _token to the form
                 this.form.append(this.string_token, this.token);
                 // append _data to the form
-                this.form.append(this.string_data, this.data);
+                this.form.append(this.string_data, JSON.stringify(this.data));
 
                 // try to access the URL
                 x.open(this.request_method, this.url);
              
-                // x.setRequestHeader("Content-type", "multipart/form-data");
+                //x.setRequestHeader("Content-type", "multipart/form-data");
         
                 x.onreadystatechange = function($info) {
                     // if status is 200 | success
