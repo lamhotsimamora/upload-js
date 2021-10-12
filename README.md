@@ -29,7 +29,9 @@ _upload = new Upload({
 		// String
 		url   : 'server-side/upload.php',
 		// String
-		data  : 'id|1',
+		data  :  {
+                    id: 1
+                },
 		// String
 		token : 'abcde12345'
 	}).start(($response)=>{
