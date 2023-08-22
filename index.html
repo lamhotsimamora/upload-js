@@ -1,5 +1,6 @@
 <html lang="en" class="h-100">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Upload multiple files with javascript">
@@ -7,88 +8,121 @@
     <meta name="generator" content="upload.js">
     <meta name="title" content="Upload multiple files with javascript">
     <title>Upload Files</title>
-	<meta name="copyright" 			content="Copyright@2019 | lamhotsimamora36@gmail.com" />
-	
-	<meta name="language" 		  	content="Indonesian, English" />
-	<meta name="distribution" 	  	content="Global" />
-	<meta name="rating" 		  	content="General" />
-	<meta name="expires" 		  	content="1800" />
-	<meta name="theme-color"      	content="#E43539"> 
+    <meta name="copyright" content="Copyright@2019 | lamhotsimamora36@gmail.com" />
+
+    <meta name="language" content="Indonesian, English" />
+    <meta name="distribution" content="Global" />
+    <meta name="rating" content="General" />
+    <meta name="expires" content="1800" />
+    <meta name="theme-color" content="#E43539">
 
     <!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-	<!-- include this code to your HTML -->
-	<script src="src/upload.min.js"></script>
-	<!-- include this code to your HTML -->
+    <!-- include this code to your HTML -->
+    <script src="src/upload.min.js"></script>
+    <!-- include this code to your HTML -->
 
     <style>
-      .bd-placeholder-img {font-size: 1.125rem; text-anchor: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; } @media (min-width: 768px) {.bd-placeholder-img-lg {font-size: 3.5rem; } } main > .container {padding: 60px 15px 0; } .footer {background-color: #f5f5f5; } .footer > .container {padding-right: 15px; padding-left: 15px; } code {font-size: 80%; } </style>
-  </head>
-  <body class="d-flex flex-column h-100">
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+        main>.container {
+            padding: 60px 15px 0;
+        }
+        
+        .footer {
+            background-color: #f5f5f5;
+        }
+        
+        .footer>.container {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        
+        code {
+            font-size: 80%;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
     <header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
-    <a class="navbar-brand" target="_blank" href="https://github.com/lamhotsimamora/upload-js">Github</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
+            <a class="navbar-brand" target="_blank" href="https://github.com/lamhotsimamora/upload-js">Github</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="./test/test.js">Usage </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
-<br>
-<!-- Begin page content -->
-<main role="main" class="flex-shrink-0">
-  <div class="container">
-    <h1 class="mt-5">Upload Files</h1>
-    <p class="lead">
-			<div class="input-group input-group-sm mb-3">
-			  <div class="input-group-prepend">
-			    <span class="input-group-text" style="cursor: pointer;" onclick="infoFile('0');" id="inputGroup-sizing-sm">File 1</span>
-			  </div>
-			  <input type="file" id="file_1" name="file_1" class="form-control" aria-label="" aria-describedby="inputGroup-sizing-sm">
-			</div>
-			<div class="input-group input-group-sm mb-3">
-			  <div class="input-group-prepend">
-			    <span class="input-group-text" style="cursor: pointer;" onclick="infoFile('1');" id="inputGroup-sizing-sm">File 2</span>
-			  </div>
-			  <input type="file" id="file_2" name="file_2" class="form-control" aria-label="" aria-describedby="inputGroup-sizing-sm">
-			</div>
-			<div class="input-group input-group-sm mb-3">
-			  <div class="input-group-prepend">
-			    <span class="input-group-text" style="cursor: pointer;" onclick="infoFile('2');" id="inputGroup-sizing-sm">File 3</span>
-			  </div>
-			  <input type="file" id="file_3" name="file_3" class="form-control" aria-label="" aria-describedby="inputGroup-sizing-sm">
-			</div>
-			<div class="input-group input-group-sm mb-3">
-			  <div class="input-group-prepend">
-			    <span class="input-group-text" style="cursor: pointer;" onclick="infoFile('3');" id="inputGroup-sizing-sm">File 4</span>
-			  </div>
-			  <input type="file" id="file_4" name="file_4" class="form-control" aria-label="" aria-describedby="inputGroup-sizing-sm">
-			</div>
-			<button onclick="uploadNow();" type="button" class="btn btn-outline-success">Upload Now</button>
-    </p>
-    <hr>
-		<div class="alert alert-primary" role="alert" id="display_response">
-		  
-		</div><br>
-		<div class="alert alert-success" role="alert" id="display_info_files">
-		  
-		</div>
-  </div>
-</main>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./test/test.js">Usage </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <!-- Begin page content -->
+    <main role="main" class="flex-shrink-0">
+        <div class="container">
+            <h1 class="mt-5">Upload Files</h1>
+            <p class="lead">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" style="cursor: pointer;" onclick="infoFile('0');" id="inputGroup-sizing-sm">File 1</span>
+                    </div>
+                    <input type="file" id="file_1" name="file_1" class="form-control" aria-label="" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" style="cursor: pointer;" onclick="infoFile('1');" id="inputGroup-sizing-sm">File 2</span>
+                    </div>
+                    <input type="file" id="file_2" name="file_2" class="form-control" aria-label="" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" style="cursor: pointer;" onclick="infoFile('2');" id="inputGroup-sizing-sm">File 3</span>
+                    </div>
+                    <input type="file" id="file_3" name="file_3" class="form-control" aria-label="" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" style="cursor: pointer;" onclick="infoFile('3');" id="inputGroup-sizing-sm">File 4</span>
+                    </div>
+                    <input type="file" id="file_4" name="file_4" class="form-control" aria-label="" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <button onclick="uploadNow();" type="button" class="btn btn-outline-success">Upload Now</button>
+            </p>
+            <hr>
+            <div class="alert alert-primary" role="alert" id="display_response">
 
-	<footer class="footer mt-auto py-3">
-	  <div class="container">
-	    <span class="text-muted">Copyright@2019 | Lamhot Simamora</span>
-	  </div>
-	</footer>
-	<script src="test/test.js"></script>
-  </body>
+            </div><br>
+            <div class="alert alert-success" role="alert" id="display_info_files">
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Copyright@2023 | Lamhot Simamora</span>
+        </div>
+    </footer>
+    <script src="test/test.js"></script>
+</body>
+
 </html>
