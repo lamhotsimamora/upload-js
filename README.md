@@ -10,7 +10,7 @@ Upload multiple with javascript...
 ```
 ### OR use this CDN for PRODUCTION
 ```
-<script src="https://www.cdn.lamhotsimamora.com/upload-js/"></script>
+<script src="https://cdn.jsdelivr.net/gh/lamhotsimamora/upload-js@master/src/upload.js"></script>
 ```
 
 ### Put the input file into your HTML, for example id = "file_1" and name = "file_1" (id and name of INPUT file must be SAME)
